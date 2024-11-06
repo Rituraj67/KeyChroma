@@ -181,7 +181,7 @@ app.delete('/deletepassword/:id', async (req, res) => {
     console.error(error);
     res.status(500).json({ success: false, message: 'Error deleting password.' });
   }
-});
+})
 
 
 
