@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Signin = () => {
+const Signin = ({setIsAuthenticated}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -17,6 +17,7 @@ const Signin = () => {
       localStorage.setItem("token", response.data.token);
       setSuccess("Login successful!");
       navigate("/")
+      setIsAuthenticated(true);
       setError("");
     } catch (err) {
         console.log(err);

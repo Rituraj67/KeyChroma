@@ -66,7 +66,7 @@ function App() {
           {/* Define your routes here */}
           <Route path="/" element={<Manager isAuthenticated={isAuthenticated} />} /> 
           {!isAuthenticated && <Route path="/signup" element={<Signup />} /> }
-          {!isAuthenticated && <Route path="/signin" element={<Signin />} /> }
+          {!isAuthenticated && <Route path="/signin" element={<Signin setIsAuthenticated={setIsAuthenticated} />} /> }
 
         </Routes>
         <Footer />
