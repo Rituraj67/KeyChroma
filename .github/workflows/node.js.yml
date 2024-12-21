@@ -27,5 +27,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
       working-directory: ./backend
-     
+    - run: pm2 restart backend
+      working-directory: ./backend
     
