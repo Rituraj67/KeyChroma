@@ -51,6 +51,7 @@ import Password from "./models/Password.js";
 
 app.get("/", async (req, res) => {
   console.log("Running...");
+  res.json({message: "Running"})
 });
 
 app.post("/signup", async (req, res) => {
