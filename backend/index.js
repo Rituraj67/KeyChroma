@@ -14,8 +14,7 @@ const dbName = "CryptoApp";
 const app = express();
 app.use(express.json());
 
-
-const allowedOrigins = ['https://keychroma.vercel.app'];
+const allowedOrigins = ['https://keychroma.vercel.app', 'http://localhost:5173'];
 
 const corsOptions = {
   origin: function (origin, callback) {
