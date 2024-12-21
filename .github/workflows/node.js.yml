@@ -5,8 +5,8 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
-
+    paths:
+      - 'backend/**' # Trigger only when changes are made in the backend folder
 
 jobs:
   build:
@@ -20,6 +20,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 1
+        path: ./backend
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
