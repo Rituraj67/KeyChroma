@@ -29,7 +29,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
-const port = 3000;
+const port = 8000;
 main().catch((err) => console.log(err));
 async function main() {
   try {
