@@ -24,7 +24,7 @@ const Signup = () => {
 
     try {
       // Send the POST request to backend
-      const response = await axios.post(import.meta.env.VITE_BASE_ADDRESS +'signup', { username: name, password });
+      const response = await axios.post('/api/proxy/signup', { username: name, password });
 
       // On success
       if (response.data.success) {

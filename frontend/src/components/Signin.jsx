@@ -12,7 +12,7 @@ const Signin = ({setIsAuthenticated}) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(import.meta.env.VITE_BASE_ADDRESS +"signin", { username, password });
+      const response = await axios.post("/api/proxy/signin", { username, password });
       // On successful login, save the token to localStorage or cookies
       localStorage.setItem("token", response.data.token);
       setSuccess("Login successful!");

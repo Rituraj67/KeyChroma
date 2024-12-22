@@ -25,7 +25,7 @@ function App() {
       }
 
       try {
-        const response = await fetch(import.meta.env.VITE_BASE_ADDRESS + 'verifytoken', {
+        const response = await fetch( '/api/proxy/verifytoken', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`, // Send token in headers
