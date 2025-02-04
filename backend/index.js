@@ -8,25 +8,27 @@ import cors from "cors";
 dotenv.config({
   path: "./.env",
 });
+///hellooo
 
 const dbName = "CryptoApp";
 
 const app = express();
 app.use(express.json());
 
-const allowedOrigins = ['https://keychroma.vercel.app', 'http://localhost:5173'];
+// const allowedOrigins = ['https://keychroma.vercel.app', 'http://localhost:5173',"https://keychroma.riturajs.me"];
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-};
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     if (allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {``
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 
 const port = 8000;

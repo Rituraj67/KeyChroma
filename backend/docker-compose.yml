@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web :
+    image: "riturajsingh67/keychromabackend"
+    ports :    
+      - "8000:8000"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - JWT_SECRET=${JWT_SECRET}
